@@ -24,7 +24,7 @@ model <- '
   attach_anxiety ~~ attach_avoid
 '
 
-model_fit <- lavaan::sem(model, data = data)
+model_fit <- sem(model, data = data)
 parameterEstimates(model_fit, standardized = TRUE)
 summary(model_fit, fit.measures = TRUE)
 
