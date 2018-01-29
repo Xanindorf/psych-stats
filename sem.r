@@ -26,8 +26,8 @@ model <- '
 
 model_fit <- sem(model, data = data)
 parameterEstimates(model_fit, standardized = TRUE)
-summary(model_fit, fit.measures = TRUE)
+summary(model_fit, fit.measures = TRUE, standardized = TRUE)
 
 # Rita upp en enkel graf
 # För vidare graftutorial, kolla https://rstudio-pubs-static.s3.amazonaws.com/78926_5aa94ae32fae49f3a384ce885744ef4a.html
-semPaths(model_fit, intercept = FALSE, whatLabel = "est", residuals = FALSE)
+semPaths(model_fit, intercept = FALSE, whatLabel = "std", residuals = FALSE)
