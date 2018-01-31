@@ -52,7 +52,9 @@ anova(model4, model5)
 # Sjätte modellen: byter ut intelligens mot utbildning
 model6 <- lmer(USEP ~ (1 | idnum) + (0 + tid25 | idnum) + tid25 + tid25 * utb_cent, data = long_data, REML = FALSE)
 summary(model6)
+anova(model4, model6)
 
 # Sjunde modellen: byter ut utbildning mot socioekonomisk bakgrund
-model7 <- lmer(USEP ~ tid25 * seb_cent + (1 | idnum) + (0 + tid25 | idnum) + tid25, data = long_data, REML = FALSE)
+model7 <- lmer(USEP ~ (1 | idnum) + (0 + tid25 | idnum) + tid25 + tid25 * seb_cent, data = long_data, REML = FALSE)
 summary(model7)
+anova(model4, model7)
