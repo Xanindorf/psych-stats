@@ -55,9 +55,5 @@ adjusted_model <- '
   attach_anxiety ~~ attach_avoid
 '
 
-# Testar den nya modellen
-# OBS -- modellen konvergerar inte. Varför??
+# Testar den nya modellen, men den konvergerar inte.
 adjusted_model_fit <- sem(adjusted_model, data = data)
-parameterEstimates(adjusted_model_fit, standardized = TRUE)
-summary(adjusted_model_fit, fit.measures = TRUE, standardized = TRUE)
-inspect(adjusted_model_fit, "rsquare")
